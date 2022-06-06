@@ -18,7 +18,7 @@ In order for Legal Navigator to function as expected, API keys will need to be c
 
 - **Google Translate** -- Translates site searches in Non-English languages as both the site content and SPOT functionality are in English.
 
-- **Google Geolocation** -- Lists organization resources by proximity to user via 'Find My Location' feature on Legal Navigator.
+- **Google Geocode** -- Lists organization resources by proximity to user via 'Find My Location' feature on Legal Navigator.
 
 - **SPOT** -- Maps LIST topics based to natural language input for the Guided Assistant search feature. Setup for this API is covered in the 'API Setup' section of this document.
 
