@@ -12,7 +12,7 @@ Be sure that the following are set up and up to date before continuing:
 - Wordpress (WP)
 
 ## APIs
-In order for Legal Navigator to function as expected, API keys will need to be created for the following services:
+In order for Legal Navigator to function as expected, API keys/credentials will need to be created for the following services:
 
 - **Google Maps** -- Shows organization resources on a map for single resource pages and resource list pages.
 
