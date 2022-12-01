@@ -63,7 +63,7 @@ For information on Legal Server, visit: https://www.legalserver.org/
 
 When adding a new Guided Assitant (GA) post type, you can specify that the GA be of type Legal Server. This will allow for entering a process ID and token that relates to an InCert tool. InCert tools are developed by Legal Server and setting these up must be worked out with Legal Server.
 
-### Doc Assemble
+#### Doc Assemble
 
 For information on Doc Assemble, visit: https://docassemble.org/
 
