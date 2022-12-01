@@ -24,6 +24,8 @@ In order for Legal Navigator to function as expected, API keys will need to be c
 
 - **Legal Server** -- Links Legal Server resources to Legal Navigator, as well as provides support for Legal Server Guided Assistants. Setup for this API is covered in the 'API Setup' section of this document.
 
+- **Doc Assemble** -- Links a Doc Assemble server to Legal Navigator and allows for populating a list of Doc Assemble Guided Assistants. 
+
 ## Installation/Setup
 ### File Setup
 Once an instance of Wordpress (WP) is set up (either locally or on a server):
