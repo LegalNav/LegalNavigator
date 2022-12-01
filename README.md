@@ -57,7 +57,15 @@ For information about the SPOT API, visit: https://app.swaggerhub.com/apis-docs/
 
 #### Legal Server API
 
+For information on Legal Server, visit: https://www.legalserver.org/
 
+When adding a new Guided Assitant (GA) post type, you can specify that the GA be of type Legal Server. This will allow for entering a process ID and token that relates to an InCert tool. InCert tools are developed by Legal Server and setting these up must be worked out with Legal Server.
+
+### Doc Assemble
+
+For information on Doc Assemble, visit: https://docassemble.org/
+
+In 'Theme General Settings'->'APIs', add the server URL and API key. This allows the custom DocAssemble ACF field to provide a list of the respective server's Guided Assistants. This field shows up when a new Guided Assistant of type Doc Assemble is created.
 
 #### Court Case Look Up API
 
