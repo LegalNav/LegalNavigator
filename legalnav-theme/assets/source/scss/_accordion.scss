@@ -1,0 +1,83 @@
+.accordion-callout {
+	padding: 40px 0;
+	.accordion-list {
+		@include large {
+			width: 83.333333%;
+		}
+		.accordion {
+			.accordion-image {
+				display: block;
+				margin-bottom: 35px;
+				h4 {
+					padding-left: 30px;
+					&::before, &::after {
+						content: '';
+						background-color: #0d3fb8;
+						height: 18px;
+						width: 2px;
+						display: block;
+    					position: absolute;
+						left: 10px;
+						top: 5px;
+						transition: height $trans-med ease, top $trans-med ease;
+						@include medium {
+							top: 6px;
+						}
+						@include large {
+							top: 7px;
+							height: 20px;
+						}
+					}
+					&::after {
+						height: 18px;
+						width: 2px;
+						transform: rotate(90deg);
+						top: 5px;
+						@include medium {
+							top: 6px;
+						}
+						@include large {
+							top: 7px;
+							height: 20px;
+						}
+					}
+				}
+				&.active {
+					h4 {
+						&::before {
+							height: 0;
+							top: 15px;
+							@include medium {
+								top: 16px;
+							}
+							@include large {
+								top: 17px;
+							}
+						}
+					}
+				}
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.accordion-content {
+				padding-left: 30px;
+				max-height: 0;
+			    overflow: hidden;
+			    transition: all $trans-med ease;
+				ol, ul {
+					li {
+						list-style: disc;
+						margin-left: 30px;
+					}
+				}
+				&.active {
+					max-height: 5000px;
+					padding-bottom: 24px;
+				    border-bottom: 1px solid #ddd;
+				    margin-bottom: 32px;
+				}
+			}
+		}
+	}
+}

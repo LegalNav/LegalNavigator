@@ -1,0 +1,105 @@
+.expert-op-modal {
+    position: fixed;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .25);
+    width: 400px;
+    max-width: 90%;
+    height: 150px;
+    padding: 14px 0;
+    text-align: center;
+    background-color: $white;
+    z-index: 999;
+    bottom: 20px;
+    right: -410px;
+    visibility: hidden;
+    transition: right $trans-med ease, visibility $trans-med ease;
+    @include medium {
+        bottom: 25px;
+        height: 250px;
+        padding: 48px 0 32px;
+    }
+    .close-rating-modal {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        transition: right $trans-fast ease;
+        z-index: 99;
+        @include medium {
+            right: 20px;
+            top: 12px;
+        }
+        svg {
+            width: 18px;
+            transition: width $trans-fast ease;
+            path {
+                fill: #0d3fb8;
+                stroke: #0d3fb8;
+            }
+        }
+        &:hover {
+            svg {
+                width: 20px;
+            }
+        }
+    }
+    .msg {
+        font-size: 1rem;
+        max-width: 225px;
+        margin: 0 auto;
+        line-height: 1.33;
+        @include medium {
+            font-size: 1.25rem;
+            margin: 0 auto 30px;
+            max-width: none;
+        }
+    }
+    .action-btns {
+        .action-btn {
+            display: inline-block;
+            margin: 0 32px;
+            svg {
+                width: 55px;
+                margin-bottom: 2px;
+                border-radius: 6em;
+                @include medium {
+                    width: 80px;
+                    margin-bottom: 12px;
+                }
+            }
+            span {
+                font-weight: $font-weight-bold;
+                font-size: 1.125rem;
+                display: block;
+            }
+            &:hover, &:active, &:focus {
+                svg {
+                    background-color: #0D3FB8;
+                    path {
+                        fill: $white;
+                    }
+                    g {
+                        path {
+                            fill: #0D3FB8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.active {
+        right: 5%;
+        visibility: visible;
+        @include medium {
+            right: 25px;
+        }
+    }
+}
+
+.resource-list-data {
+    transition: margin-bottom $trans-med ease;
+    &.active {
+        margin-bottom: 200px;
+        @include medium {
+            margin-bottom: 40px;
+        }
+    }
+}

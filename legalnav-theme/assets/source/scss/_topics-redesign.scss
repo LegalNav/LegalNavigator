@@ -1,0 +1,409 @@
+.topics-page {
+    .topics-page-container {
+        @include large {
+            padding-right: 0;
+        }
+        .topics-page-box {
+            padding-bottom: 90px;
+            @include large {
+                padding-bottom: 0;
+            }
+        }
+        .topics-page-box-left {
+            @include large {
+                width: 50%;
+                display: inline-block;
+                vertical-align: middle;
+                margin-bottom: 30px;
+            }
+            @include xlarge {
+                margin-bottom: 42px;
+            }
+        }
+        .region-select {
+            position: absolute;
+            z-index: 99;
+            margin-bottom: 32px;
+            top: calc(100% - 85px);
+            left: 0;
+            @include large {
+                display: inline-block;
+                width: 45%;
+                vertical-align: middle;
+                top: 0;
+                left: auto;
+                right: 0;
+            }
+            @include xlarge {
+                margin-bottom: 42px;
+            }
+            .region-select-label {
+                border: 1px solid #6b6b6b;
+                border-radius: 6px;
+                padding: 16px 18px 16px 18px;
+                display: inline-block;
+                width: 265px;
+                background-color: #d2eff6;
+                font-weight: 600;
+                color: #212529;
+                z-index: 2;
+                @include large {
+                    float: right;
+                }
+                &::after {
+                    content: '';
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+                    background-position: center;
+                    background-size: 16px;
+                    background-repeat: no-repeat;
+                    background-image: url('/wp-content/themes/legalnav2021/assets/images/dropdown-arrow-black.svg');
+                    transition: transform $trans-med ease;
+                }
+                &.active {
+                    &::after {
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+            .region-select-items {
+                border: 1px solid #6b6b6b;
+                background-color: $light-gray;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                width: 265px;
+                top: -5px;
+                padding: 0 22px;
+                max-height: 0;
+                overflow: hidden;
+                visibility: hidden;
+                transition: visibility $trans-med ease, padding $trans-med ease, max-height $trans-med ease;
+                @include large {
+                    float: right;
+                }
+                &.active {
+                    padding: 24px 22px;
+                    visibility: visible;
+                    max-height: 1200px;
+                }
+                & > .checkbox-layer {
+                    & > .checkbox-container {
+                        margin-bottom: 8px;
+                        input {
+                            display:none;
+                        }
+                        label {
+                            top: -5px;
+                            font-weight: 1000;
+                        }
+                    }
+                    & > .checkbox-layer {
+                        margin-left: 8px;
+                        & > .checkbox-layer {
+                            margin-left: 16px;
+                            & > .checkbox-layer {
+                                margin-left: 24px;
+                            }
+                        }
+                    }
+                }
+                .checkbox-container {
+                    margin-bottom: 8px;
+                    input {
+                        height: 24px;
+                        width: 24px;
+                        margin-right: 6px;
+                    }
+                    label {
+                        top: -5px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .result-tabs-container {
+            overflow: scroll;
+            white-space: nowrap;
+            margin: 0 -15px;
+            background-color: $light-gray;
+            border-top: 2px solid #ddd;
+            z-index: 1;
+            text-align: center;
+            @include medium {
+                border-top: 0;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .result-tabs {
+                display: table;
+                white-space: nowrap;
+                width: 100%;
+                height: 100px;
+                table-layout: fixed;
+                padding-bottom: 15px;
+                @include medium {
+                    border: 2px solid #ddd;
+                    border-bottom: 0;
+                    border-top-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    padding-bottom: 0;
+                }
+                a {
+                    display: table-cell;
+                    white-space: normal;
+                    text-align: center;
+                    vertical-align: middle;
+                    background-color: $light-gray;
+                    padding: 12px;
+                    width: 140px;
+                    @include medium {
+                        font-size: .9375rem;
+                        padding: 8px;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                        border-radius: 2px;
+                    }
+                    @include xlarge {
+                        font-size: 1.125rem;
+                        padding: 16px 4px;
+                    }
+                    @include xxlarge {
+                        font-size: 1.25rem;
+                    }
+                    &.active {
+                        @include medium {
+                            background-color: $white;
+                            border-bottom: 0;
+                        }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 80%;
+                            left: 10%;
+                            bottom: 0;
+                            height: 4px;
+                            background-color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+        .swipe-container {
+            background-color: #F4F4F4;
+            margin: 0 -15px;
+            text-align: center;
+            @include medium {
+                display: none;
+            }
+        }
+        .swipe-to-scroll {
+            font-weight: $font-weight-semi;
+            padding: 0 30px;
+            font-size: .875rem;
+            display: inline-block;
+            margin-bottom: 0;
+            &::before, &::after {
+                content: '';
+                background-position: center;
+                background-size: 18px;
+                background-repeat: no-repeat;
+                background-image: url('/wp-content/themes/legalnav2021/assets/images/arrow-black.svg');
+                width: 20px;
+                height: 23px;
+                transform: rotate(180deg);
+                position: absolute;
+                left: 0;
+            }
+            &::after {
+                left: auto;
+                right: 0;
+                transform: rotate(0deg);
+            }
+        }
+        #topics-results {
+            margin: 0 -15px;
+            border-bottom: 2px solid #ddd;
+            transition: opacity $trans-med ease;
+            @include medium {
+                border: 2px solid #ddd;
+                margin: 0 auto;
+                border-top: 0;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+            .result-container {
+                background-color: $light-gray;
+                padding: 12px;
+                @include medium {
+                    background-color: $white;
+                }
+                @include xlarge {
+                    padding: 20px 24px;
+                }
+                .resource-icon {
+                    padding: 20px 16px 12px;
+                    @include medium {
+                        padding: 20px 16px 20px 100px;
+                    }
+                    @include xlarge {
+                        padding: 32px 20px 32px 100px;
+                    }
+                    img {
+                        width: 48px;
+                        height: 48px;
+                        margin-bottom: 4px;
+                        @include medium {
+                            width: 60px;
+                            height: 60px;
+                            margin-bottom: 4px;
+                            position: absolute;
+                            top: 20px;
+                            left: 8px;
+                        }
+                        @include xlarge {
+                            top: 32px;
+                            left: 16px;
+                        }
+                    }
+                    h4 {
+                        margin-bottom: 2px;
+                        font-family: Montserrat,sans-serif;
+                        font-weight: 600;
+                    }
+                }
+                .find-my-location {
+                    padding: 16px 16px 32px;
+                    @include medium {
+                        padding: 16px 16px 24px 100px;
+                    }
+                    @include xlarge {
+                        padding: 8px 16px 32px 100px;
+                    }
+                    label {
+                        display: block;
+                        color: #0b2b78;
+                        font-family: Georgia,serif;
+                        font-weight: 500;
+                        font-size: 1.25rem;
+                        @include medium {
+                            font-size: 1.375rem;
+                        }
+                        @include large {
+                            font-size: 1.5rem;
+                        }
+                    }
+                    input {
+                        display: block;
+                        width: 100%;
+                        max-width: 425px;
+                        border: 1px solid #999;
+                        border-radius: 4px;
+                        height: 44px;
+                        margin-bottom: 12px;
+                        padding: 0 16px;
+                        @include large {
+                            display: inline-block;
+                            vertical-align: top;
+                            height: 50px;
+                            max-width: 550px;
+                        }
+                    }
+                    #find-location-button {
+                        display: inline-block;
+                        background-color: $blue;
+                        color: $white;
+                        cursor: pointer;
+                        text-align: center;
+                        vertical-align: middle;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        border: none;
+                        font-size: 1rem;
+                        line-height: 1.5;
+                        border-radius: 4px;
+                        padding: 10px 40px;
+                        font-weight: 600;
+                        margin: 0 auto;
+                        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                        &:hover {
+                            background-color: #0b2b78;
+                        }
+                        @include large {
+                            padding: 13px 40px;
+                            margin: 0 0 0 6px;
+                            vertical-align: top;
+                        }
+                    }
+                }
+                .resource {
+                    border: 0;
+                    background-color: $white;
+                    margin: 12px 0;
+                    transition: background-color $trans-med ease, box-shadow $trans-med ease;
+                    @include medium {
+                        background-color: $light-gray;
+                        margin: 12px 0;
+                    }
+                    &.video {
+                        iframe {
+                            @include large {
+                                display: inline-block;
+                                width: 400px;
+                                height: 275px;
+                                margin-bottom: -7px;
+                                border-top-left-radius: 4px;
+                                border-bottom-left-radius: 4px;
+                            }
+                            @include xlarge {
+                                width: 450px;
+                                height: 300px;
+                            }
+                        }
+                        .resource-details {
+                            @include large {
+                                width: calc(100% - 405px);
+                                padding: 20px;
+                            }
+                            @include xlarge {
+                                width: calc(100% - 455px);
+                                padding: 32px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        background-color: #d5d5d5;
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+                    }
+                }
+                .pagination {
+                    padding-bottom: 20px;
+                    padding-top: 24px;
+                }
+            }
+            &.loading {
+                opacity: .33;
+            }
+        }
+    }
+}
+
+.topic-page-callout {
+    border: 2px solid #ddd;
+    margin: 0 auto 48px;
+    max-width: 92%;
+    text-align: center;
+    padding: 24px 24px 0;
+    @include medium {
+        width: 92%;
+        max-width: 750px;
+    }
+    .btn-primary {
+        margin: 2px auto 20px;
+    }
+}

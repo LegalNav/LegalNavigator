@@ -1,0 +1,198 @@
+#daMainQuestion {
+    color: $dark-blue;
+}
+
+#dablock {
+    height: auto !important;
+    button[type="submit"] {
+        border: none;
+        font-size: 1rem;
+        line-height: 1.5;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        border-radius: 24px;
+        padding: 10px 40px;
+        font-weight: 600;
+        margin: 12px auto;
+        background-color: #0d3fbb;
+        color: #fff !important;
+        -webkit-appearance: none;
+        &:hover {
+            background-color: #0b2b78;
+            text-decoration: none;
+        }
+    }
+    .text-start {
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+        z-index: 9;
+        cursor: pointer;
+        -webkit-transition: .25s linear;
+        text-align: center !important;
+        margin: 20px 0;
+        border: 1px solid #7e7e7e;
+        border-radius: 4px;
+        width: 100%;
+        background-color: #fff;
+        color: #111;
+        font-weight: 600;
+        transition: background-color .4s ease;
+        .labelauty-unchecked, .labelauty-checked {
+            left: -7px;
+            color: #111;
+        }
+        &.btn-primary {
+            background-color: #d9f2f8;
+        }
+        &:hover {
+            background-color: #d9f2f8;
+        }
+    }
+    .media-action {
+        background-color: #0d3fbb;
+        color: #fff;
+        font-weight: 600;
+        &:hover {
+            background-color: #0b2b78 !important;
+        }
+    }
+    .daquestionbackbutton {
+        color: #0d3fb8;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 12px;
+        &:hover {
+            color: #0b2b78;
+        }
+    }
+    .dafooter {
+        bottom: auto;
+        height: auto;
+        overflow: visible;
+        a {
+            color: #0d3fb8;
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .form-label {
+        text-align: left !important;
+        border: none;
+        background-color: #f8f9fa;
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+    }
+}
+
+.danavdiv {
+    .nav-pills {
+        .daclickable.nav-link.active {
+            font-weight: 600;
+            background-color: #0d3fbb;
+            color: #fff;
+            -webkit-appearance: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out;
+            &:hover {
+                background-color: #0b2b78;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+#daquestion {
+    a {
+        color: #0d3fb8;
+        font-weight: 600;
+        text-decoration: none;
+        &.daterm {
+            color: #3b842c;
+            text-decoration: dashed;
+            text-decoration-line: underline;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    ul {
+        li {
+            list-style: disc;
+        }
+    }
+    .dafieldpart {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    .labelauty-unchecked-image, .labelauty-checked-image {
+        margin-right: 10px;
+        color: #000;
+    }
+    .da-form-group {
+        .da-form-label {
+            text-align: left !important;
+            &::after {
+                position: relative !important;
+                top: auto !important;
+                right: auto !important;
+                margin-left: 5px;
+            }
+        }
+    }
+    .btn-info {
+        background-color: #0d3fbb;
+        color: #fff !important;
+        padding: 12px 24px;
+        &:hover {
+            text-decoration: none;
+            background-color: #0b2b78;
+        }
+    }
+    img.dapdfscreen {
+        width: 100%;
+    }
+    #al_user_bundle {
+        display: flex;
+        flex-direction: column;
+        max-width: 280px;
+        tbody {
+            display: flex;
+            flex-direction: column;
+            tr {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 24px;
+                td {
+                    width: auto !important;
+                    padding: 0 !important;
+                    margin-bottom: 12px;
+                    a {
+                        padding: 10px 30px !important;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .al_email_container {
+        display: flex;
+        flex-direction: column;
+        .al_doc_email {
+            padding-left: 0;
+        }
+        input[type="email"] {
+            width: 100%;
+            max-width: none;
+            margin-bottom: 12px;
+        }
+        .btn-primary {
+            margin: 0;
+            max-width: 175px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.org-video-container {
+    iframe {
+        width: 100%;
+        height: 55vw;
+        margin: 30px auto;
+        @include large {
+            height: 400px;
+            max-width: 800px;
+        }
+    }
+}

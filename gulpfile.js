@@ -24,7 +24,9 @@ var paths = {
 		'./wp-content/themes/legalnav2021/assets/source/js/locations.js',
 		'./wp-content/themes/legalnav2021/assets/source/js/topics.js',
 		'./wp-content/themes/legalnav2021/assets/source/js/related-topics.js',
-		'./wp-content/themes/legalnav2021/assets/source/js/spotActions.js'
+		'./wp-content/themes/legalnav2021/assets/source/js/spotActions.js',
+		'./wp-content/themes/legalnav2021/assets/source/js/linkUpdater.js',
+		'./wp-content/themes/legalnav2021/assets/source/js/papActions.js',
 	],
 	scss: [
 		'./wp-content/themes/legalnav2021/assets/source/scss/gulp.scss',
@@ -44,7 +46,7 @@ function compileJS(cb) {
 		.pipe(notify({
 			message: "Main JS processed"
 		}));
-		
+
 	// Compile Curated Experience JS Seperately
 	gulp.src(
 			[

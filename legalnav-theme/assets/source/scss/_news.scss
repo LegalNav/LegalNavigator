@@ -1,0 +1,59 @@
+.news-callout {
+	margin: 60px auto;
+	.news-callout-top {
+		@include medium {
+			text-align: center;
+		}
+		@include large {
+			width: 83%;
+			margin: 0 auto;
+		}
+	}
+	.news {
+		@include large {
+			width: 83%;
+			margin: 0 auto;
+		}
+		.news-item {
+			padding: 20px;
+			margin-bottom: 20px;
+			border: 1px solid #ddd;
+			.news-left-content {
+				display: table-cell;
+    			vertical-align: top;
+				+ .news-right-content {
+					display: table-cell;
+					vertical-align: top;
+				}
+				.news-image {
+					width: 100px;
+				    height: 100px;
+				    margin: 0 15px 0 10px;
+				    background-size: cover;
+				    background-position: center;
+				}
+			}
+			.news-right-content {
+				@include medium {
+					text-align: center;
+					width: 100%;
+				}
+				.news-title {
+					color: $dark-blue;
+    				font-family: Georgia,serif;
+					font-size: 1.25rem;
+					line-height: 28px;
+					font-weight: 500;
+					@include medium {
+						font-size: 1.375rem;
+						line-height: 32px;
+					}
+					@include large {
+						font-size: 1.5rem;
+						line-height: 36px;
+					}
+				}
+			}
+		}
+	}
+}

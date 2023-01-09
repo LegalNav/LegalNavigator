@@ -1,0 +1,55 @@
+@media print {
+    .header-top-bar,
+    #menu-main-navigation,
+    #searchform,
+    .wp-block-button,
+    img,
+    .btn-primary,
+    .filter-container,
+    .org-actions-toolbar,
+    .org-mobile-toolbar,
+    .hamburger-button,
+    .pagination,
+    .plan-actions,
+    .plan-actions-toolbar,
+    .mapouter,
+    #map-canvas {
+        display: none !important;
+    }
+    body, html {
+        overflow: visible !important;
+    }
+    .resource {
+        break-inside: avoid;
+    }
+    .single-ln_resource {
+        div {
+            break-inside: avoid;
+        }
+    }
+    .personal-plan {
+        .plan-steps {
+            .step {
+                a {
+                    color: #000000 !important;
+                    text-decoration: none !important;
+                }
+                .step-content {
+                    max-height: 5000px;
+                }
+            }
+        }
+    }
+    .organization-details {
+        a {
+            color: #000000 !important;
+            text-decoration: none !important;
+        }
+    }
+
+}
+
+// sets print margin
+@page {
+	margin: 1in;
+}

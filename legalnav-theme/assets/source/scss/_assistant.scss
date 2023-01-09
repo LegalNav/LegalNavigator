@@ -1,0 +1,38 @@
+.sidebar {
+	border-top: 1px solid #ddd;
+	margin-top: 40px;
+	@include large {
+		border: 0;
+		margin-top: 0;
+	}
+}
+
+.side-ga-callout {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 40px 0px 20px;
+	border-top: 1px solid #ddd;
+	h5, p {
+		padding: 0 15px;
+		@include large {
+			padding: 0;
+		}
+	}
+	@include large {
+		margin: 0 0 20px;
+		width: 100%;
+		border: 1px solid #ddd;
+		padding: 20px;
+		max-width: 500px;
+	}
+	.btn-primary {
+		@include large {
+			font-size: .875rem;
+			padding: 10px 20px;
+		}
+		@include xlarge {
+			font-size: 1rem;
+		}
+	}
+}

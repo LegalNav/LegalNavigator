@@ -1,0 +1,280 @@
+article.organization {
+	.resource-link-title-external {
+		display: none;
+	}
+	div.resource-details {
+		display: block;
+	}
+	.organization-details {
+		margin: 15px 0 0;
+		word-break: break-word;
+		display: flex;
+		flex-direction: column;
+		@include xlarge {
+			flex-direction: row;
+		}
+		.organization-address, .organization-phone-number, .organization-website {
+			background-position: 1px 2px;
+			background-size: 16px;
+			background-repeat: no-repeat;
+			background-image: url('/wp-content/themes/legalnav2021/assets/images/location.svg');
+			margin-bottom: 12px;
+			padding-left: 35px;
+			padding-bottom: 4px;
+			font-size: .875rem;
+			@include xlarge {
+				display: inline-block;
+				float: left;
+				width: 33%;
+				vertical-align: top;
+				margin: 0;
+				padding: 0 25px;
+			}
+			&.link-topics-1 {
+				@include xlarge {
+					width: 100%;
+				}
+			}
+			&.link-topics-2 {
+				@include xlarge {
+					width: 50%;
+				}
+			}
+			&.link-topics-3 {
+				@include xlarge {
+					width: 33%;
+				}
+			}
+			a, p {
+				word-wrap: break-word;
+				color: #0d3fb8;
+	    		font-weight: 600;
+				font-size: .875rem;
+				padding: 0 7px 4px 0;
+				display: table;
+				transition: color $trans-med ease;
+				&:hover {
+					color: $dark-blue;
+				}
+			}
+		}
+		.organization-address {
+			background-size: 14px;
+		}
+		.organization-phone-number {
+			background-image: url('/wp-content/themes/legalnav2021/assets/images/call.svg');
+		}
+		.organization-website {
+			background-image: url('/wp-content/themes/legalnav2021/assets/images/url.svg');
+		}
+	}
+}
+
+.org-video-container {
+	@include large {
+		padding-right: 5%;
+		margin-bottom: 40px;
+	}
+}
+
+.single-ln_resource {
+	.org-actions-toolbar {
+		display: none;
+        text-align: right;
+        .toolbar-action {
+            display: inline-block;
+            margin-right: 24px;
+            svg {
+                width: 16px;
+                display: inline-block;
+                margin-right: 10px;
+                .cls-1, .cls-2 {
+                    stroke-width: 4px;
+                }
+            }
+        }
+        @include large {
+            display: block;
+			margin-top: 25px;
+        }
+	}
+	h1 {
+		+ .organization-website {
+			margin: -32px 0 32px;
+			a {
+				//background-image: url('/wp-content/themes/legalnav2021/assets/images/url.svg');
+				background-position: 1px 2px;
+				background-size: 16px;
+				background-repeat: no-repeat;
+				padding-left: 2px;
+			}
+			a:empty {
+				visibility: hidden;
+				line-height: 0;
+			}
+		}
+	}
+	.organization-details-container {
+		@include medium {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.organization-details {
+			@include medium {
+				flex-basis: 49%;
+				margin: 0 0 16px;
+			}
+		}
+		.organization-label {
+			p {
+				padding: 0 0 0 30px;
+				font-weight: $font-weight-bold;
+				margin-bottom: 8px;
+				font-size: 1.125rem;
+			}
+		}
+	}
+	.org-video-container {
+		ul {
+			li {
+				list-style-position: inside;
+				margin-bottom: 12px;
+				list-style-type: disc;
+			}
+		}
+		ol {
+			li {
+				list-style-position: inside;
+				margin-bottom: 12px;
+			}
+		}
+	}
+	h1 {
+		font-size: 1.5rem;
+		margin-bottom: 30px;
+		margin-top: 12px;
+		@include medium {
+			font-size: 1.625rem;
+		}
+		@include large {
+			font-size: 2.125rem;
+		}
+	}
+	.organization-details {
+		margin: 0 auto 20px;
+		border: 1px solid #ddd;
+		padding: 20px 20px 10px;
+		.organization-address, .organization-phone-number, .organization-website {
+			display: flex;
+			align-items: center;
+			background-position: 1px 2px;
+			background-size: 16px;
+			margin-bottom: 10px;
+			background-repeat: no-repeat;
+			//background-image: url('/wp-content/themes/legalnav2021/assets/images/location.svg');
+			p, a {
+				margin: 0;
+				font-size: 1rem;
+				padding-left: 12px;
+			}
+			svg {
+				width: 18px;
+			}
+		}
+		.organization-phone-number {
+			//background-image: url('/wp-content/themes/legalnav2021/assets/images/call.svg');
+		}
+		.organization-website {
+			//background-image: url('/wp-content/themes/legalnav2021/assets/images/url.svg');
+		}
+	}
+	.organization-overview-info, .organization-eligibility-information, .organization-description {
+		margin: 20px auto;
+		border: 1px solid #ddd;
+		padding: 20px;
+		.organization-overview {
+			margin-bottom: 40px;
+		}
+	}
+
+	.org-sidebar {
+		margin-top: 5px;
+		@include large {
+			margin-top: 0;
+			margin-bottom: 50px;
+		}
+		.mapouter {
+			height: 400px;
+    		width: 100%;
+			margin: 0 auto 20px;
+			.gmap_canvas {
+				height: 100%;
+    			width: 100%;
+				iframe {
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+		.office_hours {
+			margin: 0 auto 20px;
+			border: 1px solid #ddd;
+			padding: 20px;
+		}
+	}
+	.org-mobile-toolbar {
+		margin-bottom: 40px;
+		@include large {
+			display: none;
+		}
+	    .toolbar-action {
+	        display: inline-block;
+	        width: 33.3333%;
+	        padding: 20px;
+	        float: left;
+	        text-align: center;
+	        svg {
+	            width: 20px;
+	            height: 20px;
+	            margin-bottom: 5px;
+	            .cls-1, .cls-2 {
+	                stroke-width: 4px;
+	            }
+	        }
+	        span {
+	            color: $blue;
+	            background: transparent;
+	            display: table;
+	            margin: 0 auto;
+	            font-size: .75rem;
+	        }
+	    }
+	}
+}
+
+.copied-message {
+	display: none;
+	position: fixed;
+	padding: 12px 40px;
+	background-color: #fff;
+	z-index: 99;
+	border: 1px solid #ddd;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 10px;
+	box-shadow: 1px 1px 4px 0px #999;
+	@include large {
+		position: absolute;
+		right: 90px;
+		margin: 10px;
+		padding: 3px 20px;
+		top: auto;
+		left: auto;
+		transform: none;
+	}
+	&.active {
+		display: block;
+	}
+}

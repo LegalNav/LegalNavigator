@@ -1,0 +1,36 @@
+// breakpoint handling
+@mixin small {
+	@media (min-width: #{$small-width}) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media (min-width: #{$medium-width}) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media (min-width: #{$large-width}) {
+		@content;
+	}
+}
+
+@mixin xlarge {
+	@media (min-width: #{$xlarge-width}) {
+		@content;
+	}
+}
+
+@mixin xxlarge {
+	@media (min-width: #{$xxlarge-width}) {
+		@content;
+	}
+}
+
+@mixin xxxlarge {
+	@media (min-width: #{$xxxlarge-width}) {
+		@content;
+	}
+}
