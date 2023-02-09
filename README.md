@@ -48,6 +48,10 @@ _If successful, you should see a message detailing the fields that were added._
 
 _If you do not see the ACF Pro tab from the WP dashboard sidebar, make sure that you have added the proper plugins to the `plugins` directory as detailed in the first step of the File Setup section above._
 
+### Search Options
+
+There are two search mechanism available: one controlled through the SPOT API for Guided Assistants, and another for site search, which was disabled on the original site due to some difficulties with it and the the reality that the site wasn't large enough to need a full site search.
+
 ### API Setup
 
 #### SPOT API
@@ -69,9 +73,13 @@ For information on Doc Assemble, visit: https://docassemble.org/
 
 In 'Theme General Settings'->'APIs', add the server URL and API key. This allows the custom DocAssemble ACF field to provide a list of the respective server's Guided Assistants. This field shows up when a new Guided Assistant of type Doc Assemble is created.
 
+**Note** Doc Assemble does not work with Apple's Safari browser. The solution would be to utilize a reverse proxy on the server Doc Assemble is running on. This should resolve the incompatibility.
+
 #### Court Case Look Up API
 
 In the fields for creating a new State taxonomy, there is a 'Court Look Up API Settings' section. This API is state specific for the main Legal Navigator site and set up for it is not covered in this document.
+
+**Note** The Court Case Look Up API has not been tested yet.
 
 ### API Configuration
 While some of the APIs can be configured via a settings page in the Wordpress theme, a few APIs must be configured by editing a JavaScript file.
@@ -111,5 +119,5 @@ In the case of Legal Server GA's, the interviews are accessed via an API call wh
 
 A2J GA's on the other hand, are comprised of various files exported as a ZIP file from the A2J Author tool: https://www.a2jauthor.org/. Exported ZIP files are uploaded to Legal Navigator and live in the `unzipped_gas` directory within `uploads`.
 
-## Access 2 Justice (A2J) Integration
-The official Legal Navigator website has worked with the A2J team in order to have their list of resources available from the A2J Author tool (Used to create Guided Assistants). In order for another instance of Legal Navigator to support this functionality, the respective party must reach out to A2J themselves.
+## A2J Author
+The official Legal Navigator website has worked with the A2J team in order to have their list of resources available from the A2J Author tool (Used to create Guided Assistants). In order for another instance of Legal Navigator to support this functionality, the respective party must reach out to the A2J Author team at CALI.
